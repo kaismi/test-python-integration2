@@ -17,3 +17,17 @@ packages = [{include = "test_python_integration2", from = "src"}]
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "poethepoet (>=0.46.0,<0.47.0)",
+    "ruff (>=0.15.14,<0.16.0)",
+    "pytest (>=9.0.3,<10.0.0)"
+]
+
+[tool.poe.tasks]
+format = "ruff format ."
+lint = "ruff check ."
+test = "pytest"
+
+ci = { sequence = ["format", "lint", "test"] }
