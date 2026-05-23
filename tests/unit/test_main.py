@@ -1,4 +1,4 @@
-from src.test_python_integration2.main import load_app_config
+from test_python_integration2.main import load_app_config
 
 
 def test_placeholder():
