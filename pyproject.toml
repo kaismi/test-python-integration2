@@ -1,7 +1,7 @@
 [project]
 name = "test-python-integration2"
 version = "0.1.0"
-description = ""
+description = "Test project for python dev"
 authors = [
     {name = "Michael Kaiser",email = "kaiser_michael@gmx.at"}
 ]
